@@ -1,0 +1,9 @@
+
+/* this CSS file extends the application CSS file found under common\css */
+
+body {
+	height: 100%;
+	margin: 0 auto;
+	width: 100%;
+	overflow:auto;
+}

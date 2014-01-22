@@ -1,0 +1,8 @@
+{  
+	   "id" : "urls",
+	   "customerList": "./resources/data/jsonRestCustomerList.json",
+	   "customerItem": "./resources/data/customer/{Serial}.json", 
+	   "accountSummary": "./resources/data/accountSummary/{account}.json",
+	   "statement": "./resources/data/statement/{month}.json",
+	          	   	        
+}

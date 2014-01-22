@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="a4443ed6-2600-4e75-92f0-578be617fd19" Version="1.0.0.0" Publisher="CN=application's author" />
+  <Properties>
+    <DisplayName>app05</DisplayName>
+    <PublisherDisplayName>application's author</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="www\default\index.html">
+      <VisualElements DisplayName="app05" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="app05" ForegroundText="light" BackgroundColor="#131313">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="images\splashscreen.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+  	<Capability Name="privateNetworkClientServer" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

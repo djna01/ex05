@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="zdjna05">
+        <wb-resource deploy-path="/" source-path="/apps/app05/common"/>
+        <wb-resource deploy-path="/" source-path="/www"/>
+        <wb-resource deploy-path="/" source-path="/apps/app05/windows8"/>
+        <property name="context-root" value="zdjna05"/>
+    </wb-module>
+</project-modules>

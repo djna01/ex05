@@ -1,0 +1,108 @@
+{
+	"id": "PatternDemo",
+	"name": "dojoX/app pattern demo",
+	"description": "Application demonstrating UI interaction patterns implemented in dojox/app",
+	"splash": "splash",
+	
+    "comment1": "Modules referenced from several view templates",
+	"dependencies": [
+           "dojo/store/JsonRest",
+           "dojo/store/Memory",
+           
+		   "dojox/mobile/Button",
+		   
+		   "dojox/mobile/Heading",
+		   "dojox/mobile/ListItem",
+		   
+		   "dojox/mobile/RoundRectList",
+		   "dojox/mobile/RoundRectCategory",
+		   "dojox/mobile/EdgeToEdgeStoreList",
+		   "dojox/mobile/TextBox",
+		   "dojox/mobile/ToolBarButton", 
+		   "dojox/mobile/Button", 
+		   "dojox/form/Manager",
+		   
+		   "myeg/models/modelFactory",
+		   "myeg/bijits/PageHeading",
+		   "myeg/bijits/AccountSummary",
+		   "myeg/bijits/AccountDetails",
+		   "dojox/mobile/Accordion",
+		   "dojox/mobile/RoundRectList",
+		   "dojox/mobile/ListItem",
+		   "dojox/mobile/ContentPane",
+		   "dojox/mobile/Carousel",
+		   "dojox/mobile/CarouselItem",
+		   "dojox/mobile/SwapView"
+		   
+		   
+
+		   
+	],
+	
+	"comment2": "explicitly specify the controllers", 
+	"noAutoLoadControllers" : true,  
+	
+	"controllers": [
+		"dojox/app/controllers/Load",
+		"dojox/app/controllers/Transition",
+		"dojox/app/controllers/Layout",
+		"dojox/app/controllers/History"
+	],
+	
+	"models": {
+          "applicationModel": {
+                    "modelLoader": "myeg/models/modelFactory",
+                    "params": { "theApp" : "some state" }
+                }
+             },
+	
+
+	"defaultView": "home",
+
+	"defaultTransition": "slide",
+			
+	"views": {
+
+		"home": {
+			"template": "./js/views/testHarness.html"
+		},
+		
+		"cardDeck": {
+		    "controller" : "./js/views/cardDeck.js",
+			"template":  "./js/views/cardDeck.html", 
+			"dependencies":[],
+		},
+		"accountSummary1": {
+		    "controller" : "./js/views/accountSummary/accountSummary1.js",
+			"template":  "./js/views/accountSummary/accountSummary1.html", 
+			"dependencies":[],
+			"accountSummaryUrl": "worklight://accountMock/getSummary",
+			"accountSummaryUrlOld": "./resources/data/accountSummary/{user}.json",
+		},
+		"accountSummary2": {
+		    "controller" : "./js/views/accountSummary/accountSummary2.js",
+			"template":  "./js/views/accountSummary/accountSummary2.html", 
+			"dependencies":[],
+			"accountSummaryUrl": "worklight://accountMock/getSummary",
+		},
+		"accountSetup1": {
+		    "controller" : "./js/views/accountSetup/accountSetup1.js",
+			"template":  "./js/views/accountSetup/accountSetup1.html", 
+			"dependencies":[],
+		},
+		"healthSummary1": {
+		    "controller" : "./js/views/healthSummary/healthSummary1.js",
+			"template":  "./js/views/healthSummary/healthSummary1.html", 
+			"dependencies":[],
+			"healthSummaryUrl": "./resources/data/healthSummary/{user}.json",
+		},
+		
+		"testDetail": {
+		    "controller" : "./js/views/testDetail.js",
+			"template":  "./js/views/testDetail.html", 
+			"dependencies":[],
+			"accountSummaryUrl": { "$ref": "urls.accountSummary" },
+			"statementUrl": { "$ref": "urls.statement" },
+		}
+	}
+}

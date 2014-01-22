@@ -1,0 +1,6 @@
+
+Testing in Browser
+
+http://192.168.0.19:10080/_MobileBrowserSimulator/index.html
+
+http://192.168.0.19:10080/zdjna05/apps/services/preview/app05/windows8/1.0/default/index.html
